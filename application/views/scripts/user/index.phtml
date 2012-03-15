@@ -1,0 +1,13 @@
+<br /><br />
+<div id="view-content">
+	<p>View script for controller <b>User</b> and script/action name <b>index</b></p>
+	All Users: <br />
+	<p>
+		<?php foreach ($this->entries as $entry): ?>
+		<p>
+		<?php echo $this->escape($entry->userName) ?>&nbsp->&nbsp
+		<?php echo $this->escape($entry->userPassword) ?>
+		</p>
+		<?php endforeach ?>
+	</p>
+</div>
