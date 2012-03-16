@@ -34,7 +34,7 @@ class Application_Model_UserMapper
 			'userLastLogin'   => $user->getUserLastLogin(),
         );
 		
-        if (null === ($id = $user->userId())) {
+        if (null === ($id = $user->getUserId())) {
             unset($data['userId']);
             $this->getDbTable()->insert($data);
         } else {
