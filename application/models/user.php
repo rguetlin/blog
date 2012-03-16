@@ -15,7 +15,7 @@ class Application_Model_User
         }
     }
 	
-	public function __set($name, $value)
+	/*public function __set($name, $value)
 	{
 		$method = 'set' . $name;
         if (('mapper' == $name) || !method_exists($this, $method)) {
@@ -31,7 +31,7 @@ class Application_Model_User
             throw new Exception('Invalid user property');
         }
         return $this->$method();
-	}
+	}*/
 	
 	public function setOptions(array $options)
     {

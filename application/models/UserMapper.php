@@ -59,17 +59,17 @@ class Application_Model_UserMapper
     public function fetchAll()
     {
         $resultSet = $this->getDbTable()->fetchAll();
-        $entries   = array();
+        $users   = array();
         foreach ($resultSet as $row) {
-            $entry = new Application_Model_User();
-            $entry->setUserId($row->userId)
+            $user = new Application_Model_User();
+            $user ->setUserId($row->userId)
                   ->setUserName($row->userName)
                   ->setUserPassword($row->userPassword)
                   ->setUserReg($row->userRegDate)
 				  ->setUserLastLogin($row->userLastLogin);
-            $entries[] = $entry;
+            $users[] = $user;
         }
-        return $entries;
+        return $users;
     }
 
 }

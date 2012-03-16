@@ -1,0 +1,14 @@
+<br /><br />
+<div id="view-content">
+	<p>View script for controller <b>Article</b> and script/action name <b>index</b></p>
+	All Articles: <br />
+	<p>
+		<?php foreach ($this->articles as $article): ?>
+		<p>
+		<b><?php echo $this->escape($article->getArticleTitle()) ?></b>
+		<br/>&nbsp->&nbsp
+		<?php echo $this->escape($article->getArticleValue()) ?>
+		</p>
+		<?php endforeach ?>
+	</p>
+</div>

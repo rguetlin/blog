@@ -10,8 +10,8 @@ class UserController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        $user = new Application_Model_UserMapper();
-        $this->view->entries = $user->fetchAll();
+        $userMapper = new Application_Model_UserMapper();
+        $this->view->users = $userMapper->fetchAll();
     }
 
 
